@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda de Electrónicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-microchip"></i>
+                    <span>TechStore</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#productos" class="nav-link">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ofertas" class="nav-link">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">Tecnología de Vanguardia</h1>
+            <p class="hero-subtitle">Descubre los últimos dispositivos electrónicos con la mejor calidad y precios competitivos</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Ver Productos</button>
+                <button class="btn btn-secondary">Ofertas Especiales</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero-electronics.jpg" alt="Productos Electrónicos" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="productos">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/smartphone.jpg" alt="Smartphone" class="product-img">
+                        <div class="product-badge">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Smartphone Pro Max</h3>
+                        <p class="product-description">Pantalla 6.7", 128GB, Cámara 48MP</p>
+                        <div class="product-price">
+                            <span class="price-current">S/899.99</span>
+                            <span class="price-original">S/999.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="smartphone">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/laptop.jpg" alt="Laptop" class="product-img">
+                        <div class="product-badge sale">Oferta</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Laptop Gaming</h3>
+                        <p class="product-description">Intel i7, 16GB RAM, RTX 3060</p>
+                        <div class="product-price">
+                            <span class="price-current">$1,299.99</span>
+                            <span class="price-original">$1,599.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="laptop">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/headphones.jpg" alt="Auriculares" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Auriculares Wireless</h3>
+                        <p class="product-description">Cancelación de ruido, 30h batería</p>
+                        <div class="product-price">
+                            <span class="price-current">$199.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="headphones">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/tablet.jpg" alt="Tablet" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tablet Pro</h3>
+                        <p class="product-description">Pantalla 11", 256GB, Stylus incluido</p>
+                        <div class="product-price">
+                            <span class="price-current">$599.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="tablet">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/smartwatch.jpg" alt="Smartwatch" class="product-img">
+                        <div class="product-badge">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Smartwatch Pro</h3>
+                        <p class="product-description">Pantalla AMOLED, GPS, Resistente al agua</p>
+                        <div class="product-price">
+                            <span class="price-current">$299.99</span>
+                            <span class="price-original">$349.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="smartwatch">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/camera.jpg" alt="Cámara" class="product-img">
+                        <div class="product-badge sale">Oferta</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cámara DSLR</h3>
+                        <p class="product-description">24MP, 4K Video, Lente 18-55mm</p>
+                        <div class="product-price">
+                            <span class="price-current">$799.99</span>
+                            <span class="price-original">$999.99</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="camera">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Envío Gratis</h3>
+                    <p>En compras superiores a $500</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Devolución Fácil</h3>
+                    <p>30 días para cambiar de opinión</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Asistencia técnica especializada</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Hasta 3 años de garantía</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Mantente Actualizado</h2>
+                <p>Recibe las últimas ofertas y novedades tecnológicas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-microchip"></i>
+                        <span>TechStore</span>
+                    </div>
+                    <p>Tu tienda de confianza para la mejor tecnología. Calidad garantizada y precios competitivos.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Auriculares</a></li>
+                        <li><a href="#">Tablets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@techstore.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Ciudad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn btn-primary btn-checkout">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
